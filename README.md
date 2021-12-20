@@ -1,6 +1,6 @@
 # KnowInfo
 
-"Physics_Sim_Py" is a tutorial of physics simulations with Python.
+"KnowInfo" is a sub process of Ryouiki-Tenkai with Teachable Machine.
 
 ## DEMO
 
