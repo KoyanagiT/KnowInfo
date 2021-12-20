@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>Teachable Machine Audio Model</div>
-
+<button type="button" onclick="back()">suspend ryouiki-tenkai</button>
 <div id="label-container"></div>
 <script src="./tf.min.js"></script>
 <script src="./speech-commands.min.js"></script>
@@ -43,6 +43,7 @@
         var query = location.search;
         var value = query.split('=');
         console.log(decodeURIComponent(value[1]));
+        
         for (let i = 0; i < classLabels.length; i++) {
             labelContainer.appendChild(document.createElement("div"));
         }
@@ -65,6 +66,10 @@
 
         // Stop the recognition in 5 seconds.
         // setTimeout(() => recognizer.stopListening(), 5000);
+    }
+    
+    function back() {
+        window.location.href = "https://koyanagit.github.io/Ryouiki_tenkai/"
     }
     
     init();
