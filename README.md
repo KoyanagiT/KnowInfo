@@ -4,12 +4,12 @@
 
 ## Usage
 
-  You don't play simulations here.
-  Plese go to Original project to Click on [this](https://github.com/KoyanagiT/Ryouiki_tenkai).
+You don't play simulations here.
+Please go to Original project to Click on [this](https://github.com/KoyanagiT/Ryouiki_tenkai).
 
 ## Note
 
-  You don't play simulations here.
+You don't play simulations here.
 
 ## Author
 
