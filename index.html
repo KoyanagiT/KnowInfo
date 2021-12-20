@@ -40,8 +40,9 @@
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
         const labelContainer = document.getElementById("label-container");
-        const idx = getParam();
-        console.log(idx);
+        var query = location.search;
+        var value = query.split('=');
+        console.log(decodeURIComponent(value[1]));
         for (let i = 0; i < classLabels.length; i++) {
             labelContainer.appendChild(document.createElement("div"));
         }
@@ -64,20 +65,6 @@
 
         // Stop the recognition in 5 seconds.
         // setTimeout(() => recognizer.stopListening(), 5000);
-    }
-    
-    function getParam(){
-        var url   = location.href;
-        parameters    = url.split("?");
-        params   = parameters[1].split("&");
-        var paramsArray = [];
-        for ( it = 0; it < params.length; it++ ) {
-            neet = params[it].split("=");
-            paramsArray.push(neet[0]);
-            paramsArray[neet[0]] = neet[1];
-        }
-        var categoryKey = paramsArray["id"];
-        return categoryKey;
     }
 </script>
 </body>
