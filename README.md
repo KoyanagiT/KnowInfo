@@ -3,11 +3,11 @@
 "KnowInfo" is a sub process of Ryouiki-Tenkai with Teachable Machine.
 
 ## How to use
-	1. Concentrate
-	2. Complete the hand sign
-	3. shout
-	4. Concentrate again
-	5. you'll be a Shaman
+  1. Concentrate
+  2. Complete the hand sign
+  3. shout
+  4. Concentrate again
+  5. you'll be a Shaman
 
 ## DEMO
 
