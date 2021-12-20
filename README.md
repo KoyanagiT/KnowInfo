@@ -5,7 +5,7 @@
 ## Usage
 
 You don't play simulations here.
-Please go to Original project to Click on [this](https://github.com/KoyanagiT/Ryouiki_tenkai).
+Please go to the Original project to Click on [this](https://github.com/KoyanagiT/Ryouiki_tenkai).
 
 ## Note
 
