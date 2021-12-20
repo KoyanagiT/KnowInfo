@@ -2,6 +2,13 @@
 
 "KnowInfo" is a sub process of Ryouiki-Tenkai with Teachable Machine.
 
+## How to use
+ 1. Concentrate
+ 2. Complete the hand sign
+ 3. shout
+ 4. Concentrate again
+ 5. you'll be a Shaman
+
 ## DEMO
 
 You can learn how to making cute physics simulations (looks retro game).
@@ -69,9 +76,3 @@ I don't test environments under Linux and Mac.
 Enjoy making cute physics simulations!
 
 Thank you!
-## How to use
-### 1. Concentrate
-### 2. Complete the hand sign
-### 3. shout
-### 4. Concentrate again
-### 5. you'll be a Shaman
