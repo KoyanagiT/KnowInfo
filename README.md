@@ -9,11 +9,12 @@ Please go to the Original project to Click on [this](https://github.com/Koyanagi
 
 ## Note
 
-You don't play simulations here.
+*This simulations work on only "Google Chrome".
+*And, I don't test environments under Linux and Mac.
 
 ## Author
 
-* me
+me
 
 Enjoy making Ryouiki-Tenkai simulations!
 
