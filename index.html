@@ -50,7 +50,7 @@
 
 		//'追加しました'という文字列を<ul id = "info"></ul>の部分に表示する
 		var text1 = document.createElement("p");
-		text1.innerHTML = '追加しました';
+		text1.innerHTML = decodeURIComponent(value[1]);
 		document.getElementById('info').appendChild(text1);
         
         //const content = element.innerHTML;
