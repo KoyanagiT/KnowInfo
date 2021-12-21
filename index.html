@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Teachable Machine Ryouiki-Tenkai Model</h1>
+    <h2>Teachable Machine Ryouiki-Tenkai Model</h2>
 <button type="button" onclick="back()">suspend ryouiki-tenkai</button>
 <div id="label-container"></div>
 <script src="./tf.min.js"></script>
@@ -43,6 +44,9 @@
         var query = location.search;
         var value = query.split('=');
         console.log(decodeURIComponent(value[1]));
+        
+        const content = element.innerHTML;
+        element.innerHTML = decodeURIComponent(value[1]);
         
         for (let i = 0; i < classLabels.length; i++) {
             labelContainer.appendChild(document.createElement("div"));
