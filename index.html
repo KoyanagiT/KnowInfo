@@ -46,7 +46,7 @@
         console.log(decodeURIComponent(value[1]));
         
         const content = element.innerHTML;
-        element.innerHTML = decodeURIComponent(value[1]);
+        element.innerHTML = "<div>"+decodeURIComponent(value[1])+"</div>";
         
         for (let i = 0; i < classLabels.length; i++) {
             labelContainer.appendChild(document.createElement("div"));
