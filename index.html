@@ -10,6 +10,7 @@
     <h1>Teachable Machine Ryouiki-Tenkai Model</h1>
     <h2>Teachable Machine Ryouiki-Tenkai Model</h2>
 <button type="button" onclick="back()">suspend ryouiki-tenkai</button>
+<ul id="info"></ul>
 <div id="label-container"></div>
 <script src="./tf.min.js"></script>
 <script src="./speech-commands.min.js"></script>
@@ -45,8 +46,16 @@
         var value = query.split('=');
         console.log(decodeURIComponent(value[1]));
         
-        const content = element.innerHTML;
-        element.innerHTML = "<div>"+decodeURIComponent(value[1])+"</div>";
+        //<ul id = "info"></ul>の中を一度削除する
+		document.getElementById('info').innerHTML = "";
+
+		//'追加しました'という文字列を<ul id = "info"></ul>の部分に表示する
+		var text1 = document.createElement("p");
+		text1.innerHTML = '追加しました';
+		document.getElementById('info').appendChild(text1);
+        
+        //const content = element.innerHTML;
+        //element.innerHTML = "<div>"+decodeURIComponent(value[1])+"</div>";
         
         for (let i = 0; i < classLabels.length; i++) {
             labelContainer.appendChild(document.createElement("div"));
