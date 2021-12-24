@@ -89,15 +89,18 @@
         
         tag = document.getElementById("video");
         switch(decodeURIComponent(value[1])){
-               case "kan-gou-an-ei-tei":
-                    tag.src = "./img/kangouCharge.mp4";
-                    break;
-               case "gai-kan-techi-sen":
-                    tag.src = "./img/gaikanCharge.mp4";
-                    break;
-               case "hu-ku-ma-mizushi":
-                    tag.src = "./img/hukumaCharge.mp4";
-                    break;
+            case "kan-gou-an-ei-tei":
+                tag.src = "./img/kangouCharge.mp4";
+                break;
+            case "gai-kan-techi-sen":
+                tag.src = "./img/gaikanCharge.mp4";
+                break;
+            case "hu-ku-ma-mizushi":
+                tag.src = "./img/hukumaCharge.mp4";
+                break;
+            default:
+                tag.src = "./img/hukumaCharge.mp4";
+                break;
         } 
            
         //const content = element.innerHTML;
