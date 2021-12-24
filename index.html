@@ -7,6 +7,41 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+        
+@keyframes fadeIn { /*animation-nameで設定した値を書く*/
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+}
+</style>
+    <div id="video-area">
+    <video id="video" webkit-playsinline playsinline muted autoplay loop>
+    <source src="./img/Start.mp4" type="video/mp4">
+    </video>
+    </div>
     <h1>Teachable Machine Ryouiki-Tenkai Model</h1>
 <button type="button" onclick="back()">suspend ryouiki-tenkai</button>
 <ul id="info"></ul>
@@ -48,11 +83,23 @@
         //<ul id = "info"></ul>の中を一度削除する
         document.getElementById('info').innerHTML = "";
 
-		//'追加しました'という文字列を<ul id = "info"></ul>の部分に表示する
-        var text1 = document.createElement("p");
+		var text1 = document.createElement("p");
         text1.innerHTML = decodeURIComponent(value[1]);
         document.getElementById('info').appendChild(text1);
         
+        tag = document.getElementById("video");
+        switch(decodeURIComponent(value[1])){
+               case "kan-gou-an-ei-tei":
+                    tag.src = "./img/kangouCharge.mp4";
+                    break;
+               case "gai-kan-techi-sen":
+                    tag.src = "./img/gaikanCharge.mp4";
+                    break;
+               case "hu-ku-ma-mizushi":
+                    tag.src = "./img/hukumaCharge.mp4";
+                    break;
+        } 
+           
         //const content = element.innerHTML;
         //element.innerHTML = "<div>"+decodeURIComponent(value[1])+"</div>";
         
