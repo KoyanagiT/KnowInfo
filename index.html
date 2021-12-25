@@ -144,7 +144,9 @@
             if(detect == "hikari-yo"){
                 tag = document.getElementById("video");
                 tag.src = "./img/hikariyo.mp4";
-                window.location.href = "https://koyanagit.github.io/Ryouiki_tenkai/";
+                setTimeout(function(){
+                    window.location.href = "https://koyanagit.github.io/Ryouiki_tenkai/";
+                }, 300);
             }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
