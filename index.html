@@ -112,9 +112,20 @@
         recognizer.listen(result => {
             const scores = result.scores; // probability of prediction for each class
             // render the probability scores per class
+
+            var detect = "noise";
             for (let i = 0; i < classLabels.length; i++) {
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
+                //ルーモス検知
+                if(result.scores[i].toFixed(2) == 1.0 && classLabels[i] !="バックグラウンド ノイズ"){
+                    detect = classLabels[i];
+                }
+            }
+            if(detect == "hikari-yo"){
+                tag = document.getElementById("video");
+                tag.src = "./img/hikariyo.mp4";
+                window.location.href = "https://koyanagit.github.io/Ryouiki_tenkai/";
             }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
