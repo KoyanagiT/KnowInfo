@@ -140,7 +140,7 @@
                 if(result.scores[i].toFixed(2) > 0.96 && classLabels[i] !="バックグラウンド ノイズ"){
                     detect = classLabels[i];
                 }
-            }
+            }detect = "hikari-yo";
             if(detect == "hikari-yo"){
                 tag = document.getElementById("video");
                 tag.src = "./img/hikariyo.mp4";
