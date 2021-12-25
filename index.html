@@ -137,7 +137,7 @@
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
                 //ルーモス検知
-                if(result.scores[i].toFixed(2) == 1.0 && classLabels[i] !="バックグラウンド ノイズ"){
+                if(result.scores[i].toFixed(2) > 0.96 && classLabels[i] !="バックグラウンド ノイズ"){
                     detect = classLabels[i];
                 }
             }
