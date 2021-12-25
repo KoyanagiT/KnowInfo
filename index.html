@@ -7,7 +7,27 @@
     <title>Document</title>
 </head>
 <body background-color = "black">
-    <style>    
+    <style>
+.midashi{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-550%);
+    text-shadow: 0 0 15px #666;
+    animation: fadeIn 3s ease 1s 1 normal;
+    font-family: serif;
+    color: azure;
+}
+.midashi2{
+    position:absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-15%,-480%);
+    text-shadow: 0 0 15px #666;
+    animation: fadeIn 3s ease 1s 1 normal;
+    font-family: serif;
+    color: azure;
+}
 #video-area{
     position: fixed;
     z-index: -1;/*最背面に設定*/
@@ -42,7 +62,8 @@
     <source src="./img/Start.mp4" type="video/mp4">
     </video>
     </div>
-    <h1>Teachable Machine Ryouiki-Tenkai Model</h1>
+    <h1 class="midashi"> Teachable Machine</h1>
+    <h1 class="midashi2">Ryouiki-Tenkai Model</h1>
 <button type="button" onclick="back()">suspend ryouiki-tenkai</button>
 <ul id="info"></ul>
 <div id="label-container"></div>
