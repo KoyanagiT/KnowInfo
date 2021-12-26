@@ -85,7 +85,7 @@
     </div>
     <h1 class="midashi" id="midashi1"> Teachable Machine</h1>
     <h1 class="midashi2" id="midashi2">Ryouiki-Tenkai Model</h1>
-<button type="button" onclick="back()" class="buttonS">suspend ryouiki-tenkai</button>
+<button type="button" onclick="back()" class="buttonS" id="bb">suspend ryouiki-tenkai</button>
 <ul id="info"></ul>
 <div id="label-container"></div>
 <script src="./tf.min.js"></script>
@@ -179,7 +179,7 @@
                 case "kan-gou-an-ei-tei":
                     if(detect == "kagou"){
                         tag.src = "./img/kangou.mp4";
-                        var list_element = document.getElementById("buttonS");
+                        var list_element = document.getElementById("bb");
                         list_element.remove();
                         list_element = document.getElementById("midashi1");
                         list_element.remove();
@@ -190,7 +190,7 @@
                 case "gai-kan-techi-sen":
                     if(detect == "gaikan"){
                         tag.src = "./img/hukuma.mp4";
-                        var list_element = document.getElementById("buttonS");
+                        var list_element = document.getElementById("bb");
                         list_element.remove();
                         list_element = document.getElementById("midashi1");
                         list_element.remove();
@@ -201,7 +201,7 @@
                 case "hu-ku-ma-mizushi":
                     if(detect == "hukuma"){
                         tag.src = "./img/gaikan.mp4";
-                        var list_element = document.getElementById("buttonS");
+                        var list_element = document.getElementById("bb");
                         list_element.remove();
                         list_element = document.getElementById("midashi1");
                         list_element.remove();
