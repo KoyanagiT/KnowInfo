@@ -94,7 +94,6 @@
     async function init() {
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
-        const labelContainer = document.getElementById("label-container");
         const midashi1Container = document.getElementById("midashi1");
         const midashi2Container = document.getElementById("midashi2");
         
@@ -131,9 +130,6 @@
         //const content = element.innerHTML;
         //element.innerHTML = "<div>"+decodeURIComponent(value[1])+"</div>";
         
-        for (let i = 0; i < classLabels.length; i++) {
-            labelContainer.appendChild(document.createElement("div"));
-        }
         // listen() takes two arguments:
         // 1. A callback function that is invoked anytime a word is recognized.
         // 2. A configuration object with adjustable fields
@@ -143,8 +139,7 @@
 
             var detect = "noise";
             for (let i = 0; i < classLabels.length; i++) {
-                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+                result.scores[i].toFixed(2);
                 //ルーモス検知
                 if(result.scores[i].toFixed(2) > 0.96 && classLabels[i] !="バックグラウンド ノイズ"){
                     detect = classLabels[i];
