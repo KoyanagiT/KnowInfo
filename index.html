@@ -60,8 +60,8 @@
     <source src="./img/Start.mp4" type="video/mp4">
     </video>
     </div>
-    <h1 class="midashi"> Teachable Machine</h1>
-    <h1 class="midashi2">Ryouiki-Tenkai Model</h1>
+    <h1 class="midashi" id="midashi1"> Teachable Machine</h1>
+    <h1 class="midashi2" id="midashi2">Ryouiki-Tenkai Model</h1>
 <button type="button" onclick="back()">suspend ryouiki-tenkai</button>
 <ul id="info"></ul>
 <div id="label-container"></div>
@@ -95,6 +95,9 @@
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
         const labelContainer = document.getElementById("label-container");
+        const midashi1Container = document.getElementById("midashi1");
+        const midashi2Container = document.getElementById("midashi2");
+        
         var query = location.search;
         var value = query.split('=');
         console.log(decodeURIComponent(value[1]));
@@ -110,12 +113,18 @@
         switch(decodeURIComponent(value[1])){
             case "kan-gou-an-ei-tei":
                 tag.src = "./img/kangouCharge.mp4";
+                midashi1Container.innerHTML = "kan-gou-an-ei-tei";
+                midashi2Container.innerHTML = "is Ready to activate...";
                 break;
             case "gai-kan-techi-sen":
                 tag.src = "./img/gaikanCharge.mp4";
+                midashi1Container.innerHTML = "gai-kan-techi-sen";
+                midashi2Container.innerHTML = "is Ready to activate...";
                 break;
             case "hu-ku-ma-mizushi":
                 tag.src = "./img/hukumaCharge.mp4";
+                midashi1Container.innerHTML = "hu-ku-ma-mizushi";
+                midashi2Container.innerHTML = "is Ready to activate...";
                 break;
         } 
            
