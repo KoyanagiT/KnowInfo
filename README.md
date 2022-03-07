@@ -1,3 +1,5 @@
+知識情報工学という授業で作った作品（続き）
+
 # KnowInfo
 
 "KnowInfo" is a sub process of Ryouiki-Tenkai with Teachable Machine.
